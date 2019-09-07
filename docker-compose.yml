@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  images:
+    image: rachelklinkatsis/usethis_images:latest
+    depends_on:
+      - 'database'
+    ports:
+      - '3777:3777'
+   
+  database:
+    image: mongo:latest
